@@ -1,0 +1,27 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.140.1351.0 (25.02)+9bb96b6a5aee417774126f3416805b86efac121f
+
+annotation PBI_QueryOrder = ["server","database","DimCustomer","DimDate","DimProducts","DimReseller","DimSalesTerritory","FactSales"]
+
+annotation PBI_ProTooling = ["CalcGroup","TMDLView_Desktop","DevMode"]
+
+ref table DimCustomer
+ref table DimDate
+ref table DimProducts
+ref table DimReseller
+ref table DimSalesTerritory
+ref table FactSales
+ref table ModelMeasures
+
+ref cultureInfo en-US
+

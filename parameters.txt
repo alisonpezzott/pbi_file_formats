@@ -1,0 +1,4 @@
+parameters
+
+server: BOOK-PROIJR07F2
+database: AdventureWorksDW-PRD

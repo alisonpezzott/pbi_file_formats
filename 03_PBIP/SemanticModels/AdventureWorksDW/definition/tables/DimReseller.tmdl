@@ -1,0 +1,79 @@
+table DimReseller
+	lineageTag: 567a0c62-75e9-4325-a2c8-b6240e32463e
+
+	column ResellerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 25df36a8-d135-41d9-88c2-4c7416dcf67d
+		summarizeBy: none
+		sourceColumn: ResellerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessType
+		dataType: string
+		lineageTag: 3621445d-dfb8-4ed5-8a7e-1d03557682e8
+		summarizeBy: none
+		sourceColumn: BusinessType
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResellerName
+		dataType: string
+		lineageTag: 9cdcf498-e802-4e4a-8522-e00e9ce912e8
+		summarizeBy: none
+		sourceColumn: ResellerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberEmployees
+		dataType: int64
+		formatString: 0
+		lineageTag: f3522040-4a7a-4b78-8391-39472c4d0ebb
+		summarizeBy: none
+		sourceColumn: NumberEmployees
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 57d082f0-b160-4e0a-bbff-ea81fc9e57a0
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateProvinceName
+		dataType: string
+		lineageTag: f17b9e48-554b-4e98-870e-a5cad2a83b10
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: StateProvinceName
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishCountryRegionName
+		dataType: string
+		lineageTag: 1079fb40-07df-4930-846a-cc8e4f5eca3b
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: EnglishCountryRegionName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimReseller = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(server, database),
+				    Custom1 = Source{[Name="DimReseller"]}[Data],
+				    #"Expanded DimGeography" = Table.ExpandRecordColumn(Custom1, "DimGeography", {"City", "StateProvinceName", "EnglishCountryRegionName"}, {"City", "StateProvinceName", "EnglishCountryRegionName"}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Expanded DimGeography",{"ResellerKey", "BusinessType", "ResellerName", "NumberEmployees", "City", "StateProvinceName", "EnglishCountryRegionName"})
+				in
+				    #"Removed Other Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

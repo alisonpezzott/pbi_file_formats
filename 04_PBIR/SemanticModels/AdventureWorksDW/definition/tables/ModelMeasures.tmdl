@@ -1,0 +1,34 @@
+table ModelMeasures
+	lineageTag: d99b872c-9c29-45b2-a031-98270fd78938
+
+	measure 'Sales Amount' = ```
+			
+			SUMX(
+			    'FactSales',
+			    'FactSales'[OrderQuantity] * 'FactSales'[UnitPrice]
+			)
+			
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 72cc143a-23bc-4ddd-865b-767daef6028f
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column Value
+		isHidden
+		formatString: 0
+		lineageTag: a2ff2a64-4a3a-49a9-ab54-1c08c91bac7b
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ModelMeasures = calculated
+		mode: import
+		source = ```
+				{0} 
+				```
+
+	annotation PBI_Id = 83ef0fdcc86148bfb7e17e09b27132a1
+

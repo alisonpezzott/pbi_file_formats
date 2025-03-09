@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Country Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2d9c2377-954c-4851-a64e-3fd5a1d86640"
+  }
+}
