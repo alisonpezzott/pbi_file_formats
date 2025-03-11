@@ -121,32 +121,30 @@ Below is a diagram of the file structures examples for better visualization of e
 
 ### \*.pbip with TMSL  
 
-
-```lua
-root/
-|-- Adventure Works.Report/
-|   |-- .pbi/
-|       |-- localSettings.json
-|   |-- StaticResources/
-|       |-- RegisteredResources/
-|           |-- based_github_nordtheme9185362298209934.json
-|       |-- SharedResources/
-|           |-- BaseThemes/
-|               |-- CY24SU10.json
-|   |-- .platform
-|   |-- .definition.pbir  
-|   |-- report.json  
-|-- Adventure Works.SemanticModel/
-|   |-- .pbi/
-|       |-- cache.abf
-|       |-- editorSettings.json
-|       |-- localSettings.json
-|   |-- .platform
-|   |-- definition.pbism
-|   |-- diagramLayout.json
-|   |-- model.bim
-|-- Adventure Works.pbip
-
+```
+📂 Project
+   ├ 📂 Adventure Works.Report
+   │    ├ 📂 .pbi
+   │    │    └ localSettings.json
+   │    ├ 📂 StaticResources
+   │    │    ├ 📂 RegisteredResources
+   │    │    │    └ based_github_nordtheme9185362298209934.json
+   │    │    └ 📂 SharedResources
+   │    │         └ 📂 BaseThemes
+   │    │              └ CY24SU10.json
+   │    ├ .platform
+   │    ├ definition.pbir  
+   │    └ report.json  
+   ├ 📂 Adventure Works.SemanticModel
+   │    ├ 📂 .pbi
+   │    │    ├ cache.abf
+   │    │    ├ editorSettings.json
+   │    │    └ localSettings.json
+   │    ├ .platform
+   │    ├ definition.pbism
+   │    ├ diagramLayout.json
+   │    └ model.bim
+   └ 📂 Adventure Works.pbip
 ```  
 
 
@@ -154,124 +152,124 @@ root/
 
 ### \*.pbip with TMDL
 
-```lua
-root/
-|-- Adventure Works.Report/
-|   |-- .pbi/
-|       |-- localSettings.json
-|   |-- StaticResources/
-|       |-- RegisteredResources/
-|           |-- based_github_nordtheme9185362298209934.json
-|       |-- SharedResources/
-|           |-- BaseThemes/
-|               |-- CY24SU10.json
-|   |-- .platform
-|   |-- .definition.pbir  
-|   |-- report.json  
-|-- Adventure Works.SemanticModel/
-|   |-- .pbi/
-|       |-- cache.abf
-|       |-- editorSettings.json
-|       |-- localSettings.json
-|   |-- definition/
-|       |-- cultures/
-|           |-- pt-BR.tmdl
-|       |-- tables /
-|           |-- DimCustomer.tmdl
-|           |-- DimDate.tmdl
-|           |-- DimProducts.tmdl
-|           |-- DimReseller.tmdl
-|           |-- DimSalesTerritory.tmdl
-|           |-- FactSales.tmdl
-|           |-- ModelMeasures.tmdl
-|       |-- database.tmdl
-|       |-- expressions.tmdl
-|       |-- model.tmdl
-|       |-- relationships.tmdl
-|   |-- .platform
-|   |-- definition.pbism
-|   |-- diagramLayout.json
-|-- Adventure Works.pbip
+```
+📂 Project
+   ├ 📂 Adventure Works.Report
+   │    ├ 📂 .pbi
+   │    │    └ localSettings.json
+   │    ├ 📂 StaticResources
+   │    │    ├ 📂 RegisteredResources
+   │    │    │    └ based_github_nordtheme9185362298209934.json
+   │    │    └ 📂 SharedResources
+   │    │         └ 📂 BaseThemes
+   │    │              └ CY24SU10.json
+   │    ├ .platform
+   │    ├ definition.pbir  
+   │    └ report.json  
+   ├ 📂 Adventure Works.SemanticModel
+   │    ├ 📂 .pbi
+   │    │    ├ cache.abf
+   │    │    ├ editorSettings.json
+   │    │    └ localSettings.json
+   │    ├ 📂 defintion
+   │    │    ├ 📂 cultures
+   │    │    │    └ pt-BR.tmdl
+   │    │    ├ 📂 tables
+   │    │    │    ├ DimCustomer.tmdl
+   │    │    │    ├ DimDate.tmdl
+   │    │    │    ├ DimProducts.tmdl
+   │    │    │    ├ DimReseller.tmdl
+   │    │    │    ├ DimSalesTerritory.tmdl
+   │    │    │    ├ FactSales.tmdl
+   │    │    │    └ ModelMeasures.tmdl
+   │    │    ├ database.tmdl
+   │    │    ├ expressions.tmdl
+   │    │    ├ model.tmdl
+   │    │    └ relationships.tmdl
+   │    ├ .platform
+   │    ├ definition.pbism
+   │    └ diagramLayout.json
+   └ 📂 Adventure Works.pbip
 ```  
 
 
 
 ### \*.pbir  
 
-```lua
-root_folder/
-|-- Adventure Works.Report/
-|   |-- .pbi/
-|       |-- localSettings.json
-|   |-- definition/
-|       |-- pages/
-|           |-- Channel/
-|               |-- visuals/  
-|                   |-- 6fec997fe119a35953ad/  
-|                       |-- visual.json
-|                   |-- 8a08fd6bf63d32c4a76f/  
-|                       |-- visual.json
-|                   |-- 17693be68ea5dc027d7f/  
-|                       |-- visual.json
-|                   |-- babca6ecb4152335ec58/  
-|                       |-- visual.json
-|               |-- page.json
-|           |-- Country/
-|               |-- visuals/  
-|                   |-- 8a08fd6bf63d32c4a76g/  
-|                       |-- visual.json
-|                   |-- 8a045467be336dde1d3c/  
-|                       |-- visual.json
-|                   |-- 3519728a5aadb94bc3d8/  
-|                       |-- visual.json
-|                   |-- babca6ecb4152335ec59/  
-|                       |-- visual.json
-|               |-- page.json
-|           |-- Products/
-|               |-- visuals/  
-|                   |-- 6fec997fe119a35953ae/  
-|                       |-- visual.json
-|                   |-- 8a08fd6bf63d32c4a76h/  
-|                       |-- visual.json
-|                   |-- 17693be68ea5dc027d7g/  
-|                       |-- visual.json
-|                   |-- babca6ecb4152335ec60/  
-|                       |-- visual.json
-|               |-- page.json
-|           |-- pages.json
-|       |-- report.json
-|       |-- version.json
-|   |-- StaticResources/
-|       |-- RegisteredResources/
-|           |-- based_github_nordtheme9185362298209934.json
-|       |-- SharedResources/
-|           |-- BaseThemes/
-|               |-- CY24SU10.json
-|   |-- .platform
-|   |-- .definition.pbir  
-|-- Adventure Works.SemanticModel/
-|   |-- .pbi/
-|       |-- cache.abf
-|       |-- editorSettings.json
-|       |-- localSettings.json
-|   |-- definition/
-|       |-- cultures/
-|           |-- pt-BR.tmdl
-|       |-- tables /
-|           |-- DimCustomer.tmdl
-|           |-- DimDate.tmdl
-|           |-- DimProducts.tmdl
-|           |-- DimReseller.tmdl
-|           |-- DimSalesTerritory.tmdl
-|           |-- FactSales.tmdl
-|           |-- ModelMeasures.tmdl
-|       |-- database.tmdl
-|       |-- expressions.tmdl
-|       |-- model.tmdl
-|       |-- relationships.tmdl
-|   |-- .platform
-|   |-- definition.pbism
-|   |-- diagramLayout.json
-|-- Adventure Works.pbip
+```
+📂 Project
+   ├ 📂 Adventure Works.Report
+   │    ├ 📂 .pbi
+   │    │    └ localSettings.json
+   │    ├ 📂 definition
+   │    │    ├ 📂 pages
+   │    │    │    ├ 📂 Channel
+   │    │    │    │    ├ 📂 visuals
+   │    │    │    │    │    ├ 📂 6fec997fe119a35953ad
+   │    │    │    │    │    │    └ visual.json
+   │    │    │    │    │    ├ 📂 8a08fd6bf63d32c4a76f
+   │    │    │    │    │    │    └ visual.json
+   │    │    │    │    │    ├ 📂 17693be68ea5dc027d7f
+   │    │    │    │    │    │    └ visual.json
+   │    │    │    │    │    └ 📂 babca6ecb4152335ec58
+   │    │    │    │    │         └ visual.json
+   │    │    │    │    └ page.json
+   │    │    │    ├ 📂 Country
+   │    │    │    │    ├ 📂 visuals
+   │    │    │    │    │    ├ 📂 8a08fd6bf63d32c4a76g
+   │    │    │    │    │    │    └ visual.json
+   │    │    │    │    │    ├ 📂 8a045467be336dde1d3c
+   │    │    │    │    │    │    └ visual.json
+   │    │    │    │    │    ├ 📂 3519728a5aadb94bc3d8
+   │    │    │    │    │    │    └ visual.json
+   │    │    │    │    │    └ 📂 babca6ecb4152335ec59
+   │    │    │    │    │         └ visual.json
+   │    │    │    │    └ page.json
+   │    │    │    ├ 📂 Products
+   │    │    │    │    ├ 📂 visuals
+   │    │    │    │    │    ├ 📂 6fec997fe119a35953ae
+   │    │    │    │    │    │    └ visual.json
+   │    │    │    │    │    ├ 📂 8a08fd6bf63d32c4a76h
+   │    │    │    │    │    │    └ visual.json
+   │    │    │    │    │    ├ 📂 17693be68ea5dc027d7g
+   │    │    │    │    │    │    └ visual.json
+   │    │    │    │    │    └ 📂 babca6ecb4152335ec60
+   │    │    │    │    │         └ visual.json
+   │    │    │    │    └ page.json
+   │    │    │    └ pages.json
+   │    │    ├ report.json
+   │    │    └ version.json
+   │    ├ 📂 StaticResources
+   │    │    ├ 📂 RegisteredResources
+   │    │    │    └ based_github_nordtheme9185362298209934.json
+   │    │    └ 📂 SharedResources
+   │    │         └ 📂 BaseThemes
+   │    │              └ CY24SU10.json
+   │    ├ .platform
+   │    └ definition.pbir  
+   ├ 📂 Adventure Works.SemanticModel
+   │    ├ 📂 .pbi
+   │    │    ├ cache.abf
+   │    │    ├ editorSettings.json
+   │    │    └ localSettings.json
+   │    ├ 📂 defintion
+   │    │    ├ 📂 cultures
+   │    │    │    └ pt-BR.tmdl
+   │    │    ├ 📂 tables
+   │    │    │    ├ DimCustomer.tmdl
+   │    │    │    ├ DimDate.tmdl
+   │    │    │    ├ DimProducts.tmdl
+   │    │    │    ├ DimReseller.tmdl
+   │    │    │    ├ DimSalesTerritory.tmdl
+   │    │    │    ├ FactSales.tmdl
+   │    │    │    └ ModelMeasures.tmdl
+   │    │    ├ database.tmdl
+   │    │    ├ expressions.tmdl
+   │    │    ├ model.tmdl
+   │    │    └ relationships.tmdl
+   │    ├ .platform
+   │    ├ definition.pbism
+   │    └ diagramLayout.json
+   └ 📂 Adventure Works.pbip
 ```  
 
