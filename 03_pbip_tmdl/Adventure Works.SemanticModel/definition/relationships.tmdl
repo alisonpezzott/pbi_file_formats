@@ -1,0 +1,30 @@
+relationship AutoDetected_b6ed0682-5d1e-4ea9-9638-5ab09bad316a
+	fromColumn: FactSales.ProductKey
+	toColumn: DimProducts.ProductKey
+
+relationship AutoDetected_45beb3d0-b639-486f-ba8f-3cec178954ad
+	fromColumn: FactSales.SalesTerritoryKey
+	toColumn: DimSalesTerritory.SalesTerritoryKey
+
+relationship c676c19e-aefe-2991-18e7-92b1ef883186
+	fromColumn: FactSales.CustomerKey
+	toColumn: DimCustomer.CustomerKey
+
+relationship 55dce1b6-41f6-6e5e-f9ea-9c9140d08547
+	fromColumn: FactSales.OrderDateKey
+	toColumn: DimDate.DateKey
+
+relationship 777b30e8-47f6-e70a-89ea-8f4a1439ec8b
+	isActive: false
+	fromColumn: FactSales.DueDateKey
+	toColumn: DimDate.DateKey
+
+relationship 621ddbdb-723a-3ee1-22fd-4ae0a5c88ce4
+	isActive: false
+	fromColumn: FactSales.ShipDateKey
+	toColumn: DimDate.DateKey
+
+relationship 102e5ec6-1f98-958e-6a6e-decd22a787ef
+	fromColumn: FactSales.ResellerKey
+	toColumn: DimReseller.ResellerKey
+
